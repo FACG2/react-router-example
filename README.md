@@ -6,6 +6,7 @@ Try to understand the folder structure:
 
 - **actions**
   - functions which are called from your components
+  - these functions dispatch `actions`
   - related to redux
 - **assets**
   - static files such as icons, graphics, logos
@@ -14,7 +15,7 @@ Try to understand the folder structure:
 - **constants**
   - action types
 - **reducers**
-  - functions which listen for actions then change state
+  - functions which listen for `actions` return a new state
   - related to redux
 - **styles**
   - css/sass
