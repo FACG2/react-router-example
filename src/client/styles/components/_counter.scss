@@ -1,0 +1,14 @@
+.counter {
+  &__title {
+    color: $green-color;
+  }
+
+  &__count {
+    color: $green-color;
+  }
+
+  &__button {
+    background-color: $white-color;
+    border: 2px solid $green-color;
+  }
+}
