@@ -1,6 +1,3 @@
-export const COUNTER_INCREMENT = Symbol('COUNTER_INCREMENT');
-export const COUNTER_DECREMENT = Symbol('COUNTER_DECREMENT');
-
-export const POSTS_FETCH_START = Symbol('POSTS_FETCH_START');
-export const POSTS_FETCH_SUCCESS = Symbol('POSTS_FETCH_SUCCESS');
-export const POSTS_FETCH_FAILURE = Symbol('POSTS_FETCH_FAILURE');
+export const LOGIN_START = Symbol('LOGIN_START');
+export const LOGIN_FAIL = Symbol('LOGIN_FAIL');
+export const LOGIN_SUCCESS = Symbol('LOGIN_SUCCESS');

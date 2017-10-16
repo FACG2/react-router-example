@@ -5,9 +5,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import createStore from './reducers';
 
-import Nav from './components/Nav';
-import Counter from './components/Counter';
+import AppHeader from './components/AppHeader';
 import Home from './components/Home';
+import About from './components/About';
+import Login from './components/Login';
 
 import './styles/index.scss';
 
@@ -17,10 +18,11 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div className='app'>
-        <Nav />
+        <AppHeader />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/counter' component={Counter} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/about' component={About} />
         </Switch>
       </div>
     </BrowserRouter>

@@ -2,10 +2,10 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-import counter from './counter-reducer';
+import login from './login-reducer';
 
 const reducer = combineReducers({
-  counter
+  login
 });
 
 const loggerMiddleware = createLogger();
