@@ -1,41 +1,17 @@
 import {
-  LOGIN_START,
-  LOGIN_FAIL,
-  LOGIN_SUCCESS,
   LOGOUT_START,
   LOGOUT_FAIL,
   LOGOUT_SUCCESS
 } from '../constants/actionTypes';
 
 const initialState = {
-  isLoggedIn: false,
+  isLoggedIn: true,
   isFetching: false,
-  user: {}
+  user: { username: 'mantagen', role: 'admin' }
 };
 
-const login = (state = initialState, action) => {
+const logout = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_START: {
-      return {
-        ...state,
-        isFetching: true
-      };
-    }
-    case LOGIN_SUCCESS: {
-      return {
-        ...state,
-        user: action.payload,
-        isFetching: false,
-        isLoggedIn: true
-      };
-    }
-    case LOGIN_FAIL: {
-      return {
-        ...state,
-        isFetching: false,
-        isLoggedIn: false
-      };
-    }
     case LOGOUT_START: {
       return {
         ...state,
@@ -61,4 +37,4 @@ const login = (state = initialState, action) => {
   }
 };
 
-export default login;
+export default logout;

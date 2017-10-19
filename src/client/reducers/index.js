@@ -3,9 +3,11 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
 import login from './login-reducer';
+import logout from './logout-reducer';
 
 const reducer = combineReducers({
-  login
+  login,
+  logout
 });
 
 const loggerMiddleware = createLogger();

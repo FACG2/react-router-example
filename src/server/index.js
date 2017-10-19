@@ -3,7 +3,7 @@ import path from 'path';
 
 import logger from './middleware/logger';
 
-const PORT = 9012;
+const PORT = 3000;
 
 const app = express();
 
@@ -15,6 +15,15 @@ app.post('/login', (req, res) => {
   setTimeout(() => {
     res.json({ username: 'mantagen', role: 'admin' });
   }, 2500);
+});
+app.post('/logout', (req, res) => {
+  res.json({ });
+});
+
+// Always return the main index.html, so react-router render the route in the client
+app.get('*', (req, res) => {
+  // res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+  res.json('Page not Found 404');
 });
 
 app.listen(PORT, () => {
